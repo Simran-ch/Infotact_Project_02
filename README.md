@@ -11,6 +11,10 @@
 <br>
 :) Beautiful and responsive Flask web interface
 <br>
+:) Hybrid Recommendation Engine using:
+* Dataset-based matching with cosine similarity
+* Real-time fallback using Google Books API
+<br>
 :) Each recommended book includes:
 * Book cover
 * Author
