@@ -87,8 +87,6 @@ Simran Chaudhary
 <br>
 🎓 M.Sc. Artificial Intelligence & Data Analytics 
 <br>
-Internship Project at Infotact Solutions
-<br>
 **LinkedIn :** https://www.linkedin.com/in/simranchaudhary07/
 
 
