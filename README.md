@@ -35,12 +35,12 @@ Top-rated books shown on homepage using vote count + average rating
 User enters a book title
 <br>
 
-**If found in local dataset :** 
+**(a) If found in local dataset :** 
 - Recommend 5 most similar books using cosine similarity 
 <br>
 
 
-**If not found :**
+**(a) If not found :**
 - Calls **Google Books API** to get live recommendations
 - Show relevant info like book cover, author, description, genre
 
