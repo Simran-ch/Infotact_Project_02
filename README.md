@@ -82,10 +82,14 @@ User enters a book title
 
 ---
 
-### **Author**
+### **--Author--**
 Simran Chaudhary
-🎓 M.Sc. AI & Data Analytics | Internship Project at Infotact Solutions
-GitHub: Simran-ch
+<br>
+🎓 M.Sc. Artificial Intelligence & Data Analytics 
+<br>
+Internship Project at Infotact Solutions
+<br>
+**LinkedIn :** https://www.linkedin.com/in/simranchaudhary07/
 
 
 
