@@ -4,10 +4,10 @@
 ---
 
 ### **--Dataset Used--**
-:) **Source :** https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
+**Source :** https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
 <br>
 
-:) **Content :**
+**Content :**
 The Book-Crossing dataset comprises 3 files.
 <br>
 - **Users :** Contains the users. Note that user IDs (User-ID) have been anonymized and map to integers. Demographic data is provided (Location, Age) if available. Otherwise, these fields contain NULL-values.
@@ -28,11 +28,11 @@ This system allows users to:
 
 ### **--How It Works--**
 ####  **Phase 1: Dataset-Based Recommendation (Collaborative + Popularity)**
-:) Top-rated books shown on homepage using vote count + average rating
+Top-rated books shown on homepage using vote count + average rating
 <br>
 
 #### **Phase 2: Hybrid Content-Based Recommendation**
-:) User enters a book title
+User enters a book title
 <br>
 
 **If found in local dataset :** 
