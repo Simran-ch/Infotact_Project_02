@@ -22,11 +22,11 @@ Contains the book rating information. Ratings (Book-Rating) are either explicit,
 <br>
 
 ### **--How It Works--**
-###  **Phase 1: Dataset-Based Recommendation (Collaborative + Popularity)**
+##  **Phase 1: Dataset-Based Recommendation (Collaborative + Popularity)**
 :) Top-rated books shown on homepage using vote count + average rating
 <br>
 
-### **Phase 2: Hybrid Content-Based Recommendation**
+## **Phase 2: Hybrid Content-Based Recommendation**
 :) User enters a book title
 <br>
 * If found in local dataset :
