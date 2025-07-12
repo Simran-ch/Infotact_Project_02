@@ -12,13 +12,9 @@
 :) Beautiful and responsive Flask web interface
 <br>
 :) Each recommended book includes:
-<br>
 * Book cover
-<br>
 * Author
-<br>
 * Description (toggle Read More)
-<br>
 * Genre
 <br>
 :) Fallback for missing covers
