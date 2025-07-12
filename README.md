@@ -1,5 +1,5 @@
 ## Infotact_Project_01
-#### Developed a personalized book recommendation system that suggests similar books based on user input using both machine learning and real-time API data. 
+### Developed a personalized book recommendation system that suggests similar books based on user input using both machine learning and real-time API data. 
 
 
 ### **--Features--**
