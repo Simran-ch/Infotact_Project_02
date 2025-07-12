@@ -6,20 +6,16 @@
 :) Search any book and get personalized recommendations.
 <br>
 :) Hybrid Recommendation Engine using:
-* Dataset-based matching with cosine similarity
-* Real-time fallback using Google Books API
+- Dataset-based matching with cosine similarity
+- Real-time fallback using Google Books API
 <br>
 :) Beautiful and responsive Flask web interface
 <br>
-:) Hybrid Recommendation Engine using:
-* Dataset-based matching with cosine similarity
-* Real-time fallback using Google Books API
-<br>
 :) Each recommended book includes:
-* Book cover
-* Author
-* Description (toggle Read More)
-* Genre
+- Book cover
+- Author
+- Description (toggle Read More)
+- Genre
 <br>
 :) Fallback for missing covers
 <br>
