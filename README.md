@@ -6,9 +6,7 @@
 :) Search any book and get personalized recommendations.
 <br>
 :) Hybrid Recommendation Engine using:
-<br>
 * Dataset-based matching with cosine similarity
-<br>
 * Real-time fallback using Google Books API
 <br>
 :) Beautiful and responsive Flask web interface
