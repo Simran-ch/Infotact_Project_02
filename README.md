@@ -29,15 +29,13 @@ Contains the book rating information. Ratings (Book-Rating) are either explicit,
 #### **Phase 2: Hybrid Content-Based Recommendation**
 :) User enters a book title
 <br>
-* If found in local dataset :
+**If found in local dataset :** Recommend 5 most similar books using cosine similarity on TF-IDF vectors
 <br>
-       Recommend 5 most similar books using cosine similarity on TF-IDF vectors
+**If not found :**
 <br>
-* If not found :
+Fetch recommendations in real-time from Google Books API
 <br>
-     Fetch recommendations in real-time from Google Books API
-  <br>
-     Show relevant info like book cover, author, description, genre
+Show relevant info like book cover, author, description, genre
 
   
 ###  Dataset Exploration
