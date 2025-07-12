@@ -13,13 +13,13 @@
 <br>
 :) Each recommended book includes:
 <br>
- **Book cover**
+* Book cover
 <br>
- **Author**
+* Author
 <br>
-**Description (toggle Read More)**
+* Description (toggle Read More)
 <br>
-**Genre**
+* Genre
 <br>
 :) Fallback for missing covers
 <br>
