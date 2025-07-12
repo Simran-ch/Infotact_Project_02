@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<style>
+    .text-black {
+        color: black;
+    }
+
+     /* Make toggler icon (three lines) white */
+    .navbar-toggler {
+        border-color: white;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .gradient-heading {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     }
+
+    .gradient-icon{
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+  .toggle-desc {
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+.recommend-wrapper {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  padding: 2px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.recommend-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  height: auto;
+  margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommend-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recommend-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+</style>
+
+
+<body style="background: linear-gradient(to top left, white); display: flex; flex-direction: column;min-height: 100vh;" >
+
+<nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e);">
+        <div class="container-fluid ">
+        <a class="navbar-brand ms-3 text-white" href="#"><i class="fas fa-book-reader me-2"></i><b>Hybrid Book Recommendation System</b></a>
+            <button class="navbar-toggler text-white" style="font-size: 18px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon " style="font-size: 18px;"></span></button>
+            <div class="collapse navbar-collapse justify-content-end me-3" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="/" style="font-size: 18px;"><b>Home</b></a></li>
+                    <li class="nav-item"><a class="nav-link text-white ms-3" href="/recommend" style="font-size: 18px;"><b>Recommend</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container flex-grow-1 mb-5">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <h1 class="gradient-heading mt-2 mb-4" style="font-size:25px;">Discover books similar to your favorites</h1>
+            <form action="/recommend_books" method="post" style="margin-top: -10px;">
+                <input name="user_input" type="text" class="form-control mb-2"
+                       placeholder="🔍 Type a book you like..." style="background-color: white;">
+
+                <input type="submit" value="Find Similar Books" class="btn px-3 py-2 mt-2 mb-3"
+                       style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+                       color: white; font-size: 15px; border-radius: 6px;">
+            </form>
+        </div>
+
+{% for book in data %}
+  <div class="recommend-wrapper">
+    <div class="row align-items-center recommend-card">
+      <div class="col-md-3 text-center">
+        <img src="{{ book[2] }}" alt="Book Cover"
+             onerror="this.onerror=null;this.src='/static/images/cover-not-found.jpg';"
+             style="max-height: 220px; max-width: 100%; object-fit: contain; margin-bottom: 10px;">
+          <div class="recommend-title">{{ book[0] }}</div>
+      </div>
+      <div class="col-md-9">
+        <p><strong>Author :</strong> {{ book[1] }}</p>
+        <p style="text-align: justify;">
+          <strong>Description :</strong>
+          <span class="short-desc"> {{ book[3][:400] }}{% if book[3]|length > 300 %}...{% endif %}</span>
+          {% if book[3]|length > 300 %}
+            <span class="full-desc d-none">{{ book[3] }}</span>
+            <a href="javascript:void(0);" class="toggle-desc text-primary">Read More</a>
+          {% endif %}
+        </p>
+        <p><strong>Genre :</strong> {{ book[4] }}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer class="text-center mt-auto py-4 text-muted bg-light border-top" >
+
+  <div class="container">
+    <div class="mb-2">
+      <a href="https://www.linkedin.com/in/simranchaudhary07/" target="_blank" class="gradient-icon mt-4 mx-3">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+
+      <a href="https://github.com/Simran-ch" target="_blank" class= "gradient-icon mt-4 mx-3">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+    </div>
+
+      <span><strong>© 2025 Book Recommender System  | Made with ❤️ by Simran Chaudhary</strong></span>
+  </div>
+
+  <a href="#" class="btn btn-sm rounded-circle shadow position-fixed" style="bottom: 20px; right: 20px;
+     z-index: 999; background: linear-gradient(to right, #0f0c29, #302b63, #24243e); color: white;">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.toggle-desc');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+        const parent = toggle.parentElement;
+        const shortDesc = parent.querySelector('.short-desc');
+        const fullDesc = parent.querySelector('.full-desc');
+
+        if (fullDesc.classList.contains('d-none')) {
+          shortDesc.style.display = 'none';
+          fullDesc.classList.remove('d-none');
+          toggle.textContent = 'Show Less';
+        } else {
+          shortDesc.style.display = 'inline';
+          fullDesc.classList.add('d-none');
+          toggle.textContent = 'Read More';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
