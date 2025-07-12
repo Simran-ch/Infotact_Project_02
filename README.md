@@ -7,9 +7,9 @@
 <br>
 :) Hybrid Recommendation Engine using:
 <br>
-:) Dataset-based matching with cosine similarity
+* Dataset-based matching with cosine similarity
 <br>
-:) Real-time fallback using Google Books API
+* Real-time fallback using Google Books API
 <br>
 :) Beautiful and responsive Flask web interface
 <br>
