@@ -40,7 +40,7 @@ User enters a book title
 <br>
 
 
-**(a) If not found :**
+**(b) If not found :**
 - Calls **Google Books API** to get live recommendations
 - Show relevant info like book cover, author, description, genre
 
