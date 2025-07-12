@@ -3,7 +3,6 @@
 
 
 ### **--Features--**
-<br>
 :) Search any book and get personalized recommendations.
 <br>
 :) Hybrid Recommendation Engine using:
@@ -29,10 +28,9 @@
 
 
 ### **--Dataset Used--**
+**Source :** https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
 <br>
-### **Source :** https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
-<br>
-### **--Content--**
+**--Content--**
 <br>
 The Book-Crossing dataset comprises 3 files :-
 <br>
@@ -44,7 +42,6 @@ The Book-Crossing dataset comprises 3 files :-
 <br>
 
 ###  **--How It Works--**
-<br>
 **Phase 1: Dataset-Based Recommendation (Collaborative + Popularity)**
 <br>
 :) Top-rated books shown on homepage using vote count + average rating
