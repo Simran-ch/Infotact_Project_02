@@ -1,6 +1,8 @@
 ## Infotact_Project_01
 ### Developed a personalized book recommendation system that suggests similar books based on user input using both machine learning and real-time API data. 
 
+---
+
 ### **--Dataset Used--**
 :) **Source :** https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
 <br>
@@ -13,6 +15,8 @@ The Book-Crossing dataset comprises 3 files.
 - **Ratings :** Contains the book rating information. Ratings (Book-Rating) are either explicit, expressed on a scale from 1-10 (higher values denoting higher appreciation), or implicit, expressed by 0.
 <br>
 
+---
+
 ### **--Project Overview--**
 This system allows users to:
 - Get top 50 popular books (based on ratings & votes)
@@ -20,7 +24,8 @@ This system allows users to:
 - If the book doesn't exist in dataset then it will fetch real-time similar books via **Google Books API**
 - View book cover, title, author, description, and genre beautifully styled in cards
 
-  
+ --- 
+
 ### **--How It Works--**
 ####  **Phase 1: Dataset-Based Recommendation (Collaborative + Popularity)**
 :) Top-rated books shown on homepage using vote count + average rating
@@ -31,63 +36,26 @@ This system allows users to:
 <br>
 
 **If found in local dataset :** 
-<br>
-(a) Recommend 5 most similar books using cosine similarity on TF-IDF vectors
+- Recommend 5 most similar books using cosine similarity 
 <br>
 
 
 **If not found :**
-<br>
-(a) Fetch recommendations in real-time from Google Books API
-<br>
-(b) Show relevant info like book cover, author, description, genre
-
-  
-
+- Calls **Google Books API** to get live recommendations
+- Show relevant info like book cover, author, description, genre
 
 ---
 
+### **--ML Techniques Implemented--**
 
-
----
-
-## 📂 Dataset Used
-
-**Source**: [Kaggle - Book Recommendation Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
-
-- `Books.csv`: Contains book titles, ISBNs, image URLs, etc.
-- `Ratings.csv`: User ratings for books
-- `Users.csv`: User demographics (age, location)
-
----
-
-## 🧠 ML Techniques Implemented
-
-### ✅ Popularity-Based Recommendation
+#### **Popularity-Based Recommendation**
 - Based on number of ratings and average rating
 - Displays Top 50 books
 
-### ✅ Collaborative Filtering (Memory-Based)
+#### **Collaborative Filtering (Memory-Based)**
 - Used user-book matrix (pivot table)
 - Cosine similarity to compute similar books
-- Recommendation returns 4 similar books from dataset
-
-### ❌ Content-Based Filtering (TF-IDF)
-> Not implemented yet — enhancement planned for future  
-> Description/genre-based matching using TF-IDF + cosine similarity can be added
-
----
-
-## ⚙️ How It Works
-
-1. User searches for a book
-2. If found in dataset:
-   - System fetches 4 similar books using cosine similarity
-3. If not found:
-   - Calls **Google Books API** to get live recommendations
-4. Displays results with:
-   - Book cover image (fallback used if missing)
-   - Title, Author, Description (Read More toggle), Genre
+- Recommendation returns 5 similar books 
 
 ---
 
@@ -104,15 +72,20 @@ This system allows users to:
 
 ---
 
-## 🖥️ How to Run Locally
+### **--Future Improvements--**
+- Add TF-IDF + genre-based filtering
+- Save search history using session
+- Add preview link & ratings from API
+- Deploy on Render
+- Add dark mode toggle
+- Add user login system
 
-### ✅ Requirements
+---
 
-```bash
-pip install flask pandas scikit-learn requests
-
-
-
+### **Author*8
+Simran
+🎓 M.Sc. AI & Data Analytics | Internship Project at Infotact
+GitHub: Simran-ch
 
 
 
