@@ -1,4 +1,4 @@
-## Infotact_Project_01
+## Infotact_Project_02
 ### Developed a personalized book recommendation system that suggests similar books based on user input using both machine learning and real-time API data. 
 
 ---
@@ -59,7 +59,7 @@ User enters a book title
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Tool         | Use                            |
 |--------------|---------------------------------|
@@ -83,7 +83,7 @@ User enters a book title
 ---
 
 ### **Author*8
-Simran
+Simran 
 🎓 M.Sc. AI & Data Analytics | Internship Project at Infotact
 GitHub: Simran-ch
 
